@@ -1,0 +1,31 @@
+<%- include("partials/header") %>
+
+<div class="ui main text container segment">
+    <div class="ui huge header">New hotel</div>
+    <form action="/hotels" method="POST" class="ui form">
+        <div class="field">
+            <p>TITLE:</p>
+            <input class="new" type="text" name="hotel[title]" placeholder="Title">
+            <p style="padding-top: 6px ;">ENTER IMAGE URL:</p>
+            <input type="text" name="hotel[image]" placeholder="Enter Image URL">                       
+            <p style="padding-top: 6px ;">REPUTATION:</p>
+            <input class="new" type="text" name="hotel[reputation]" placeholder="Enter Reputation- Excellent/ Good/ Bad">
+            <P style="padding-top: 6px ;">DESCRIPTION:</P>
+            <textarea class="new" name="hotel[description]" placeholder="Describe your hotel here..." required cols="30" rows="10"></textarea>
+            <p style="padding-top: 6px ;">AVERAGE PRICE PER ROOM(in RS):</p>
+            <input type="text" name="hotel[price]" placeholder="Set Price...">
+            <p style="padding-top: 6px ;">LOCATION:</p>
+            <input type="text" name="hotel[location]" placeholder="Set Location">
+            <p style="padding-top: 6px ;">NUMBER OF ROOMS:</p>
+            <input type="text" name="hotel[No_of_rooms]" placeholder="Enter number of rooms">
+            <p style="padding-top: 6px ;">HOTEL ONLINE RATING(OUT OF 5):</p>
+            <input type="text" name="hotel[Hotel_rating]" placeholder="Enter online rating of the hotel">
+            <div style="padding-top: 1.5rem;">
+            <input  class="ui green button" type="Submit">
+            </div>
+        </div>
+    </form>
+</div>
+
+<%- include("partials/footer") %>
+

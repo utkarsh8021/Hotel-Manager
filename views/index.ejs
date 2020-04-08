@@ -1,0 +1,26 @@
+<%- include('partials/header') %>
+
+<div class="container">
+
+    <h1 id="mainheading">Listed Hotels</h1>
+    <div class="row">
+        <% hotels.forEach(function(hotel){ %>
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card h-100" >
+                    <img class="card-img-top" src="<%= hotel.image %>" alt="Card image cap">
+                    <div class="card-body">
+                    <h5 class="card-title"><%=hotel.title%></h5>
+                    <p class="card-text"><%=hotel.description.substring(0,100)%>...</p>
+                    <a href="/hotels/<%= hotel._id %>" class="btn btn-primary">Show More</a>
+                    </div>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+    
+</div>
+
+<%- include('partials/footer') %>
+
+
+

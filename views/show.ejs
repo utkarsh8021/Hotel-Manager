@@ -1,0 +1,28 @@
+<%- include ('partials/header') %>
+
+<div class="ui main text container segment">
+
+    <img src="<%=hotel.image%>" alt="no image">
+    <div class="ui huge header" id="hoteltitle"><%= hotel.title %></div>
+    <p style="color: blue; font-weight: bold;">REPUTATION OF THE HOTEL:</p>
+    <p><%=hotel.reputation%></p>
+    <p style="color: blue; font-weight: bold;">DESCRIPTION:</p>
+    <p><%=hotel.description%></p>
+    <p style="color: blue; font-weight: bold;">AVERAGE ROOM PRICE:</p>
+    <p><%=hotel.price%></p>
+    <P style="color: blue; font-weight: bold;">LOCATION:</P>
+    <p><%=hotel.location%></p>
+    <P style="color: blue;font-weight: bold;">NUMBER OF ROOMS;</P>
+    <p><%=hotel.No_of_rooms%></p>
+    <P style="color: blue;font-weight: bold;">HOTEL ONLINE RATING(OUT OF 5)</P>
+    <p><%=hotel.Hotel_rating%></p>
+    <div style="padding-top: 3rem;">
+        <a class="ui blue button  " href="/hotels/<%=hotel._id%>/edit">Edit</a>
+    <form style="display: inline;" action="/hotels/<%=hotel._id %>?_method=DELETE" method="post">
+        <button class="ui red button  ">Delete</button>
+    </form>
+    </div>
+</div>
+
+<%- include ('partials/footer') %>
+

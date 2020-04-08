@@ -1,0 +1,32 @@
+<%- include("partials/header") %>
+
+<div class="ui main text container segment">
+    <div class="ui huge header">Edit <%=hotel.title%></div>
+    <form action="/hotels/<%= hotel._id %>?_method=PUT" method="POST" class="ui form">
+        <div class="field">
+            <p>TITLE:</p>
+            <input type="text" name="hotel[title]" value="<%= hotel.title %>">
+            <p style="padding-top: 6px ;">IMAGE:</p>
+            <input type="text" name="hotel[image]" value="<%= hotel.image %>">           
+            <p style="padding-top: 6px ;">REPUTATION:</p>
+            <input type="text" name="hotel[reputation]" value="<%= hotel.reputation %>">
+            <P style="padding-top: 6px ;">DESCRIPTION:</P>
+            <textarea name="hotel[description]" placeholder="describe your hotel here..." required cols="30" rows="10"><%=hotel.description%></textarea>
+            <p style="padding-top: 6px ;">AVERAGE PRICE PER ROOM(in RS):</p>
+            <input type="text" name="hotel[price]" value="<%= hotel.price %>">
+            <p style="padding-top: 6px ;">LOCATION:</p>
+            <input type="text" name="hotel[location]" value="<%= hotel.location %>">
+            <p style="padding-top: 6px ;">NUMBER OF ROOMS:</p>
+            <input type="text" name="hotel[No_of_rooms]" value="<%= hotel.No_of_rooms %>">
+            <p style="padding-top: 6px ;">HOTEL ONLINE RATING(OUT OF 5):</p>
+            <input type="text" name="hotel[Hotel_rating]" value="<%= hotel.Hotel_rating %>">
+            <div style="padding-top: 1.5rem;">
+                <input  class="ui green button" type="Submit">
+            </div>
+        </div>
+    </form>
+</div>
+
+<%- include("partials/footer") %>
+
+
