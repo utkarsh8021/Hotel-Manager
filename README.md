@@ -12,6 +12,7 @@ HOW TO USE THE APP ON THE LOCAL MACHINE-
 1. Run "node app.js"
    It should display a message like- "server running on 8080"
 2. Use local server http://127.0.0.1:8080/hotels to visit the app.
+3. Local mongoDB database used- hotel-manager.
 
 
 
